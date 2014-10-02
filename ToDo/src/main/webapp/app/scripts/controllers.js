@@ -24,7 +24,8 @@ angular
     });
 
     $scope.addTask = function () {
-
+      
+      TasksFactory.createTask($scope.task);
       $scope.tasks.push($scope.task);
       $scope.task = {};
 

@@ -41,7 +41,7 @@ public class Tasks {
     	return one;
     }
 	
-	@RequestMapping(method = RequestMethod.POST,headers="Accept=application/json")
+	@RequestMapping(value="/create",method = RequestMethod.POST,headers="Accept=application/json")
 	public ResponseEntity<Task> creatTask(@RequestBody Task task, UriComponentsBuilder builder){
 		Task save = taskRepository.save(task);
 		HttpHeaders headers = new HttpHeaders();

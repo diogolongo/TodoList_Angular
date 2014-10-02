@@ -24,6 +24,19 @@ angular
       return deferred.promise;
 
     };
+    
+    exports.createTask = function (task) {
+    	
+      var deferred = $q.defer();
+    	
+      $http.post('tasks/create', task)
+        .success(function (data) {
+        	deferred.resolve(data);
+        });
+    
+      return deferred.promise;
+      
+    };
 
     return exports;
 
